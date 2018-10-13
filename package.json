@@ -1,0 +1,8 @@
+{
+  "name": "polyserv-web",
+  "version": "1.0.0",
+  "description": "Front end website for polyserv",
+  "main": "index.js",
+  "author": "Craig Pullar <craigmichaelpullar@gmail.com>",
+  "license": "MIT"
+}
