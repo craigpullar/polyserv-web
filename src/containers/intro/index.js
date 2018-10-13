@@ -1,10 +1,5 @@
-import React, { PureComponent } from "react";
-import Example from "../../components/example";
+import { withStyles } from "@material-ui/core";
+import Intro from "./container";
+import styles from "./styles";
 
-class Intro extends PureComponent {
-  render() {
-    return <Example />;
-  }
-}
-
-export default Intro;
+export default withStyles(styles)(Intro);
