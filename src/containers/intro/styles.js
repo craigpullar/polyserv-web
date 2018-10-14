@@ -1,9 +1,3 @@
-const styles = {
-  container: {
-    maxWidth: 1024,
-    margin: "2rem auto",
-    display: "block"
-  }
-};
+const styles = {};
 
 export default styles;
