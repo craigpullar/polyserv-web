@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExampleCard Component Snapshot should match existing snapshot 1`] = `
+<div
+  className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
+>
+  <h1
+    className={Object {}}
+  >
+    EXAMPLE COMPONENT
+  </h1>
+</div>
+`;
