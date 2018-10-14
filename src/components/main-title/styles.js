@@ -1,7 +1,9 @@
+import Teal from "@material-ui/core/colors/teal";
+
 const styles = {
   mainTitle: {
     marginBottom: "4rem",
-    color: "#16a085",
+    color: Teal[500],
     fontWeight: 500
   }
 };
