@@ -1,7 +1,9 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
-import Card from '@material-ui/core/Card';
-import Typography from '@material-ui/core/Typography';
+import Typography from "@material-ui/core/Typography";
+import CardContainer from "../../components/card-container";
+import MainTitle from "../../components/main-title";
+import SubTitle from "../../components/sub-title";
 
 class Intro extends PureComponent {
   static propTypes = {
@@ -10,22 +12,20 @@ class Intro extends PureComponent {
 
   render() {
     return (
-      <Card className={this.props.classes.container}>
-        <Typography variant="h1" className={this.props.classes.title}>
-          Polyserv Api
-        </Typography>
+      <CardContainer>
+        <MainTitle>PolyServ Api</MainTitle>
 
-        <Typography variant="h5" className={this.props.classes.subTitle}>
-          We are an api exposing polygon map data. Our aim is to make it
-           as easy and quick as possible for companies and developers
-           to use polygon data in their projects.
-        </Typography>
+        <SubTitle>
+          We are an api exposing polygon map data. Our aim is to make it as easy
+          and quick as possible for companies and developers to use polygon data
+          in their projects.
+        </SubTitle>
 
-        <Typography variant="h5" className={this.props.classes.subTitle}>
+        <SubTitle>
           We are currently not available to the public but feel free to checkout
-           our demo below or sign up to our mailing list for news.
-        </Typography>
-      </Card>
+          our demo below or sign up to our mailing list for news.
+        </SubTitle>
+      </CardContainer>
     );
   }
 }
