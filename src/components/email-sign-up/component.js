@@ -12,7 +12,7 @@ class EmailSignUp extends Component {
   };
 
   handleInputChange = this.handleInputChange.bind(this);
-  handleButtonClick = this.handleButtonClick.bind(this);
+  handleFormSubmit = this.handleFormSubmit.bind(this);
 
   handleInputChange(event) {
     this.setState({
@@ -20,13 +20,17 @@ class EmailSignUp extends Component {
     });
   }
 
-  handleButtonClick() {
+  handleFormSubmit(event) {
+    event.preventDefault();
     this.props.onButtonClick({ email: this.state.email });
   }
 
   render() {
     return (
-      <form className={this.props.classes.emailSignUpContainer}>
+      <form
+        className={this.props.classes.emailSignUpContainer}
+        onSubmit={this.handleFormSubmit}
+      >
         <TextField
           type="email"
           placeholder="Email address"
@@ -39,7 +43,6 @@ class EmailSignUp extends Component {
           variant="raised"
           type="submit"
           className={this.props.classes.signUpButton}
-          onClick={this.handleButtonClick}
         >
           Sign up!
         </Button>
