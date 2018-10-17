@@ -1,15 +1,14 @@
 import React, { Component } from "react";
-import { DatabaseProvider } from ".";
+import DatabaseProvider from "./database-provider";
 
 export default WrappedComponent => {
-  class ComponentWithDB extends Component {
+  class ComponentWithDatabase extends Component {
     static WrappedComponent = WrappedComponent;
 
     render() {
       return (
         <DatabaseProvider.Consumer>
           {database => {
-            console.log("database", database);
             return <WrappedComponent {...this.props} database={database} />;
           }}
         </DatabaseProvider.Consumer>
@@ -17,5 +16,5 @@ export default WrappedComponent => {
     }
   }
 
-  return ComponentWithDB;
+  return ComponentWithDatabase;
 };

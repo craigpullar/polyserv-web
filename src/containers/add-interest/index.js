@@ -4,7 +4,7 @@ import { Typography } from "@material-ui/core";
 import CardContainer from "../../components/card-container";
 import SubTitle from "../../components/sub-title";
 import EmailSignUp from "../../components/email-sign-up";
-import { withDb, addInterestedUser } from "../../libs/db";
+import { withDatabase } from "../../libs/database";
 
 class AddInterest extends Component {
   static propTypes = {
@@ -15,7 +15,7 @@ class AddInterest extends Component {
 
   async submitEmail({ email }) {
     console.log(this.props.database);
-    const docRef = await addInterestedUser({ db: this.props.database, email });
+    const docRef = await this.props.database.addInterestedUser({ email });
     console.log(docRef);
   }
 
@@ -35,4 +35,4 @@ class AddInterest extends Component {
   }
 }
 
-export default withDb(AddInterest);
+export default withDatabase(AddInterest);
