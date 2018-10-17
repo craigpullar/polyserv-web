@@ -5,6 +5,7 @@ import { TextField, Button } from "@material-ui/core";
 class EmailSignUp extends Component {
   static propTypes = {
     classes: PropTypes.object.isRequired
+    onFormSubmit: PropTypes.func.isRequired
   };
 
   state = {
@@ -22,7 +23,8 @@ class EmailSignUp extends Component {
 
   handleFormSubmit(event) {
     event.preventDefault();
-    this.props.onButtonClick({ email: this.state.email });
+    this.props.onFormSubmit({ email: this.state.email });
+    this.setState({ email: "" });
   }
 
   render() {

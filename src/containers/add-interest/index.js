@@ -16,7 +16,6 @@ class AddInterest extends Component {
   async submitEmail({ email }) {
     console.log(this.props.database);
     const docRef = await this.props.database.addInterestedUser({ email });
-    console.log(docRef);
   }
 
   render() {
@@ -29,7 +28,7 @@ class AddInterest extends Component {
           Sign up with your email and you will be in line to try us out!
         </SubTitle>
 
-        <EmailSignUp onButtonClick={this.submitEmail} />
+        <EmailSignUp onFormSubmit={this.submitEmail} />
       </CardContainer>
     );
   }
