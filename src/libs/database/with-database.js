@@ -5,10 +5,16 @@ export default WrappedComponent => {
   class ComponentWithDatabase extends Component {
     static WrappedComponent = WrappedComponent;
 
+    passDatabaseToComponent = this.passDatabaseToComponent.bind(this);
+
+    passDatabaseToComponent(database) {
+      return <WrappedComponent {...this.props} database={database} />;
+    }
+
     render() {
       return (
         <DatabaseProvider.Consumer>
-          {database => <WrappedComponent {...this.props} database={database} />}
+          {this.passDatabaseToComponent}
         </DatabaseProvider.Consumer>
       );
     }
