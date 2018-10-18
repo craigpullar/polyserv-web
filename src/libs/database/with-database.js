@@ -8,9 +8,7 @@ export default WrappedComponent => {
     render() {
       return (
         <DatabaseProvider.Consumer>
-          {database => {
-            return <WrappedComponent {...this.props} database={database} />;
-          }}
+          {database => <WrappedComponent {...this.props} database={database} />}
         </DatabaseProvider.Consumer>
       );
     }
