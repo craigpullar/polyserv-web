@@ -4,7 +4,7 @@ import { TextField, Button } from "@material-ui/core";
 
 class EmailSignUp extends Component {
   static propTypes = {
-    classes: PropTypes.object.isRequired
+    classes: PropTypes.object.isRequired,
     onFormSubmit: PropTypes.func.isRequired
   };
 
@@ -42,7 +42,7 @@ class EmailSignUp extends Component {
         />
         <Button
           color="primary"
-          variant="raised"
+          variant="contained"
           type="submit"
           className={this.props.classes.signUpButton}
         >
