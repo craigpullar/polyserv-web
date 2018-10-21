@@ -1,3 +1,3 @@
-import PolygonMap from "./component"
+import PolygonMap from "./component";
 
 export default PolygonMap;
