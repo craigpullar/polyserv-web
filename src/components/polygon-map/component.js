@@ -16,31 +16,32 @@ class PolygonMap extends Component {
   static propTypes = {
     geojsonData: PropTypes.object,
     center: PropTypes.array,
-    onPolygonClick: PropTypes.func
+    onPolygonClick: PropTypes.func,
+    onMove: PropTypes.func,
+    onMoveEnd: PropTypes.func,
+    onZoom: PropTypes.func,
+    onZoomEnd: PropTypes.func
   };
 
   static defaultProps = {
     geojsonData: {},
     center: TORONTO_LATLNG,
-    onPolygonClick: () => {}
+    onPolygonClick: () => {},
+    onMove: () => {},
+    onMoveEnd: () => {},
+    onZoom: () => {},
+    onZoomEnd: () => {}
   };
-  state = { geojson: {} };
-
-  componentWillMount() {
-    getPolygons({ bounds: "13,56,-87,-94" }).then(response => {
-      const geojson = {
-        type: "FeatureCollection",
-        features: response.data
-      };
-      this.setState({ geojson });
-    });
-  }
 
   render() {
     return (
       <Map
         style="mapbox://styles/mapbox/streets-v9"
         center={this.props.center}
+        onMove={this.props.onMove}
+        onMoveEnd={this.props.onMoveEnd}
+        onZoom={this.props.onZoom}
+        onZoomEnd={this.props.onZoomEnd}
         containerStyle={{
           height: "90vh",
           width: "90vw"
@@ -48,7 +49,7 @@ class PolygonMap extends Component {
       >
         <GeoJSONLayer
           {...POLYGON_STYLES}
-          data={this.state.geojson}
+          data={this.props.geojsonData}
           fillOnClick={this.props.onPolygonClick}
         />
       </Map>
