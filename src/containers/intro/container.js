@@ -13,7 +13,20 @@ class Intro extends PureComponent {
 
   render() {
     return (
-      <PolygonMap/>
+      <CardContainer>
+        <MainTitle>PolyServ Api</MainTitle>
+
+        <SubTitle>
+          We are an api exposing polygon map data. Our aim is to make it as easy
+          and quick as possible for companies and developers to use polygon data
+          in their projects.
+        </SubTitle>
+
+        <SubTitle>
+          We are currently not available to the public but feel free to checkout
+          our demo below or sign up to our mailing list for news.
+        </SubTitle>
+      </CardContainer>
     );
   }
 }
