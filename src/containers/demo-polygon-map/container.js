@@ -10,12 +10,8 @@ class DemoPolygonMap extends Component {
   }
 
   setPolygonsByBounds({ bounds }) {
-    getPolygons({ bounds }).then(response => {
-      const geojson = {
-        type: "FeatureCollection",
-        features: response.data
-      };
-      this.setState({ geojson });
+    getPolygons({ bounds, limit: 500 }).then(response => {
+      this.setState({ geojson: response.data });
     });
   }
 
