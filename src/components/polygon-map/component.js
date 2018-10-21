@@ -40,7 +40,7 @@ class PolygonMap extends Component {
     return (
       <Map
         style="mapbox://styles/mapbox/streets-v9"
-        center={this.props.center || TORONTO_LATLNG}
+        center={this.props.center}
         containerStyle={{
           height: "90vh",
           width: "90vw"
