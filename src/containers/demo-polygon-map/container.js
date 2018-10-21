@@ -5,7 +5,7 @@ import PolygonMap from "../../components/polygon-map";
 
 class DemoPolygonMap extends Component {
   componentWillMount() {
-    getPolygons({ bounds: "13,56,-87,-94" }).then(response => {
+    getPolygons({ bounds: "56,13,-87,-94" }).then(response => {
       const geojson = {
         type: "FeatureCollection",
         features: response.data
@@ -14,8 +14,12 @@ class DemoPolygonMap extends Component {
     });
   }
 
+  handlePolygonClick(event) {
+    console.log(event);
+  }
+
   render() {
-    return <PolygonMap />;
+    return <PolygonMap onPolygonClick={this.handlePolygonClick} />;
   }
 }
 
