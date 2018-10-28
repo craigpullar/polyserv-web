@@ -8,7 +8,7 @@
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js --mode development --env ./.env",
     "test": "jest --watch src --config ./jest.config.js",
-    "build": "webpack --config webpack.config.js -p",
+    "build": "webpack -p --config webpack.config.js",
     "deploy": "gcloud app deploy",
     "browse": "gcloud app browse"
   },
