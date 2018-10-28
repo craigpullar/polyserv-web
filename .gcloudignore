@@ -20,4 +20,3 @@ node_modules/
 src/
 .env
 .vscode/
-cloud_sql_proxy
