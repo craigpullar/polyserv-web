@@ -6,6 +6,7 @@ import CardContainer from "../../components/card-container";
 import SubTitle from "../../components/sub-title";
 import EmailSignUp from "../../components/email-sign-up";
 import { withDatabase } from "../../libs/database";
+import { CONTAINER_IDS } from "../../libs/navigation";
 
 class AddInterest extends Component {
   static propTypes = {
@@ -41,7 +42,7 @@ class AddInterest extends Component {
       : "Thank you! We'll be in touch with news!";
 
     return (
-      <CardContainer>
+      <CardContainer id={CONTAINER_IDS.SIGN_UP}>
         <Typography variant="h2" gutterBottom>
           Want to know when we are ready?
         </Typography>
