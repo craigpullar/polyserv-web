@@ -41,7 +41,9 @@ class Header extends Component {
             Demo
           </MenuItem>
           <MenuItem
-            className={this.props.classes.menuItem}
+            className={`${this.props.classes.menuItem} ${
+              this.props.classes.signUp
+            }`}
             onClick={this.onItemClick}
             scroll-to-id={CONTAINER_IDS.SIGN_UP}
           >
