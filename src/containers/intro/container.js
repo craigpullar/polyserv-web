@@ -4,6 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import CardContainer from "../../components/card-container";
 import MainTitle from "../../components/main-title";
 import SubTitle from "../../components/sub-title";
+import { CONTAINER_IDS } from "../../libs/navigation";
 
 class Intro extends PureComponent {
   static propTypes = {
@@ -12,7 +13,7 @@ class Intro extends PureComponent {
 
   render() {
     return (
-      <CardContainer>
+      <CardContainer id={CONTAINER_IDS.INTRO}>
         <MainTitle>PolyServ Api</MainTitle>
 
         <SubTitle>

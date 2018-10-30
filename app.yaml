@@ -1,0 +1,23 @@
+service: polserv-web
+runtime: nodejs8
+
+instance_class: B1
+
+basic_scaling:
+  max_instances: 1
+  idle_timeout: 10m
+
+handlers:
+  - url: /
+    static_files: dist/index.html
+    upload: dist/index.html
+  - url: /
+    static_dir: dist
+
+env_variables:
+  FIREBASE_API_KEY: "AIzaSyBNP40XVJp51uHD-zvL7lcSbPYeBIIfvEM"
+  FIREBASE_AUTH_DOMAIN: "polyserv-web.firebaseapp.com"
+  FIREBASE_DATABASE_URL: "https://polyserv-web.firebaseio.com"
+  FIREBASE_PROJECT_ID: "polyserv-web"
+  FIREBASE_STORAGE_BUCKET: "polyserv-web.appspot.com"
+  FIREBASE_MESSAGING_SENDER_ID: "309124696352"
