@@ -1,4 +1,5 @@
 import Teal from "@material-ui/core/colors/teal";
+import { BREAKPOINT_SELECTORS } from "../../libs/responsive";
 
 const styles = {
   mainTitle: {
@@ -6,7 +7,7 @@ const styles = {
     color: Teal[500],
     fontWeight: 500,
     fontSize: "4rem",
-    "@media screen and (min-width: 768px)": {
+    [BREAKPOINT_SELECTORS.TABLET]: {
       fontSize: "7rem"
     }
   }
