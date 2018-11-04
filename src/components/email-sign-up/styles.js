@@ -1,9 +1,13 @@
 const styles = {
   emailSignUpContainer: {
-    marginTop: 20
+    marginTop: 10
+  },
+  emailInput: {
+    marginTop: 10
   },
   signUpButton: {
-    marginLeft: 10
+    marginLeft: 10,
+    marginTop: 10
   }
 };
 

@@ -36,6 +36,7 @@ class EmailSignUp extends Component {
         <TextField
           type="email"
           placeholder="Email address"
+          className={this.props.classes.emailInput}
           onChange={this.handleInputChange}
           value={this.state.email}
           required
