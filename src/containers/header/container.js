@@ -27,9 +27,10 @@ class Header extends Component {
 
     return (
       <MenuItem
-        className={classes}
+        className={classes.join(" ")}
         onClick={this.onItemClick}
         scroll-to-id={containerId}
+        key={containerId}
       >
         {text}
       </MenuItem>

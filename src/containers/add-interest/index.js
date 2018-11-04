@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Typography } from "@material-ui/core";
 import Snackbar from "@material-ui/core/Snackbar";
 import CardContainer from "../../components/card-container";
 import SubTitle from "../../components/sub-title";
+import ContainerTitle from "../../components/container-title";
 import EmailSignUp from "../../components/email-sign-up";
 import { withDatabase } from "../../libs/database";
 import { CONTAINER_IDS } from "../../libs/navigation";
@@ -43,9 +43,7 @@ class AddInterest extends Component {
 
     return (
       <CardContainer id={CONTAINER_IDS.SIGN_UP}>
-        <Typography variant="h2" gutterBottom>
-          Want to know when we are ready?
-        </Typography>
+        <ContainerTitle>Want to know when we are ready?</ContainerTitle>
         <SubTitle>
           Sign up with your email and you will be in line to try us out!
         </SubTitle>
