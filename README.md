@@ -17,4 +17,8 @@ The front end client facing site for the polyserv project.
 We use jest for unit testing. You can run the tests with the following command: `yarn test`
 
 ###Deployment:
-No current deployment setup
+App deployment is done through the glcoud sdk.
+Once signed in to the gcp account you can run the following commands:
+
+1. `yarn deploy` - Deploys new version of app to gcp app engine
+2. `yarn browse` - Will open app in browser

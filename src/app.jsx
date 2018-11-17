@@ -10,8 +10,8 @@ class App extends Component {
       <React.Fragment>
         <CssBaseline>
           <Intro />
-          <Footer />
           <AddInterest />
+          <Footer />
         </CssBaseline>
       </React.Fragment>
     );
